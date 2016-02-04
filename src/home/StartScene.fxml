@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.StartSceneController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Theme">
+                     <items>
+                        <RadioMenuItem mnemonicParsing="false" selected="true" text="Default">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="themegroup" />
+                           </toggleGroup></RadioMenuItem>
+                        <RadioMenuItem mnemonicParsing="false" text="Polar Theme" toggleGroup="$themegroup" />
+                        <RadioMenuItem mnemonicParsing="false" text="Bamboo Panda" toggleGroup="$themegroup" />
+                        <RadioMenuItem mnemonicParsing="false" text="Slinky Madera" toggleGroup="$themegroup" />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label fx:id="notice" prefHeight="24.0" prefWidth="600.0" />
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox prefHeight="341.0" prefWidth="188.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView disable="true" fitHeight="238.0" fitWidth="267.0">
+               <image>
+                  <Image url="@../images/image 1.jpg" />
+               </image>
+            </ImageView>
+         </children></VBox>
+   </left>
+   <bottom>
+      <HBox prefHeight="43.0" prefWidth="600.0" spacing="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="43.0" prefWidth="398.0" />
+            <Button fx:id="next" mnemonicParsing="false" onAction="#buttonControl" prefHeight="25.0" prefWidth="60.0" text="Next" />
+            <Button fx:id="close" mnemonicParsing="false" onAction="#buttonControl" prefHeight="25.0" prefWidth="60.0" text="Close" />
+         </children>
+      </HBox>
+   </bottom>
+   <right>
+      <VBox prefHeight="298.0" prefWidth="343.0" spacing="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButton mnemonicParsing="false" selected="true" text="New Project">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup></RadioButton>
+            <TextField fx:id="projectName" onAction="#buttonControl" prefHeight="25.0" prefWidth="118.0" promptText="Project Name">
+               <VBox.margin>
+                  <Insets left="20.0" right="5.0" />
+               </VBox.margin></TextField>
+            <RadioButton mnemonicParsing="false" onAction="#openProject" text="Open Project" toggleGroup="$group" />
+         </children>
+         <padding>
+            <Insets left="10.0" top="20.0" />
+         </padding>
+      </VBox>
+   </right>
+</BorderPane>
