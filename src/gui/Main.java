@@ -1,12 +1,7 @@
-package home;
+package gui;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class Main extends Application {
     Organizer organizer;
@@ -15,7 +10,7 @@ public class Main extends Application {
 
         organizer = new Organizer();
         organizer.setStage(primaryStage);
-        organizer.setScene(": OutSet","StartScene.fxml",400,600);
+        organizer.setScene(": OutSet","StartScene.fxml",600,400);
 
     }
 

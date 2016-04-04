@@ -1,4 +1,4 @@
-package home;
+package gui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -44,7 +44,7 @@ public class StartSceneController extends Organizer{
             }
             else {
                 Organizer.projectName = projectName.getText();
-                setScene(" :Fill Details","GetInfoScene.fxml",400,600);
+                setScene(" :Fill Details","GetInfoScene.fxml",600,400);
             }
 
         }

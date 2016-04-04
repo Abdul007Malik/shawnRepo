@@ -1,4 +1,4 @@
-package home;
+package gui;
 
     import javafx.scene.paint.Color;
     import javafx.scene.text.Font;
@@ -9,11 +9,16 @@ package home;
     import javafx.scene.control.*;
     import javafx.geometry.*;
 
+/*
+* This Class generates a confirm box. */
 public class ConfirmBox {
 
 
         static int answer;
 
+    /*
+    * This method takes arguments for setting details such as title of the generated window,
+      message and any no. of note*/
         public static int display(String title, String message,String... note) {
             Stage window = new Stage();
             window.initModality(Modality.APPLICATION_MODAL);

@@ -1,4 +1,4 @@
-package home;
+package gui;
 
 
 import javafx.collections.FXCollections;
@@ -6,8 +6,14 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+/*
+* This class is the controller of the GetInfoScene fxml file and extends the Organizer class in the same package.
+ */
+
 
 public class GetInfoSceneController extends Organizer {
+
+    //All @FXML are either controls or the handler of this controller class's Scene.
     @FXML ComboBox<String> fileType ,level;
     @FXML TextField newURL;
     @FXML TextField newLocation;
@@ -40,13 +46,13 @@ public class GetInfoSceneController extends Organizer {
             }
             else {
                 //location = newLocation.getText();
-                setScene(": Active" ,"GrabStartScene.fxml",400,800);
+                setScene(": Active" ,"GrabStartScene.fxml",700,500);
 
             }
 
         }
         if (back.isArmed()){
-            setScene(": OutSet","StartScene.fxml",400,600);
+            setScene(": OutSet","StartScene.fxml",600,400);
 
         }
 

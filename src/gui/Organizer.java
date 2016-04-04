@@ -1,6 +1,8 @@
-package home;
+package gui;
 
 
+import core.FilesList;
+import core.TreeList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -22,6 +24,8 @@ public class Organizer {
     static String key, projectName, location;
     Alert alert;
     DirectoryChooser chooser;
+    FilesList filesList;
+    TreeList treeList;
 
     public void setStage(Stage stage){
         Organizer.mainStage = stage;
@@ -37,7 +41,7 @@ public class Organizer {
         }
 
         mainStage.setTitle("WebPageGrabber "+title);
-        scene = new Scene(root,width,height);
+        scene = new Scene(root,height, width);
         mainStage.setScene(scene);
         mainStage.setResizable(false);
         mainStage.show();
@@ -108,7 +112,10 @@ public class Organizer {
 
     }
 
+
+
+
     protected void closeProgram(){
-        mainStage.close();;
+        mainStage.close();
     }
 }
